@@ -1,0 +1,36 @@
+ionizedGTP_2.sdf ATOM MAP (CORRECTED) - Boltz-2 uses element+per-element index
+================================================================
+idx elem  atom-name   GTP atom
+----------------------------------------
+1   C     C1          C5'
+2   C     C2          C4'
+3   C     C3          C3'
+4   O     O1          O3'
+5   C     C4          C2'
+6   O     O2          O2'
+7   C     C5          C1'
+8   O     O3          O4'
+9   N     N1          N9
+10  C     C6          C8
+11  N     N2          N7
+12  C     C7          C5
+13  C     C8          C6
+14  O     O4          O6
+15  N     N3          N1
+16  C     C9          C2
+17  N     N4          N2
+18  N     N5          N3
+19  C     C10         C4
+20  P     P1          PA
+21  O     O5          O1A
+22  O     O6          O5'
+23  O     O7          O1G (-1)
+24  O     O8          O2A (-1)
+25  O     O9          O3A
+26  P     P2          PB
+27  O     O10         O1B
+28  O     O11         O2B (-1)
+29  O     O12         O3B
+30  P     P3          PG
+31  O     O13         O2G
+32  O     O14         O3G (-1)

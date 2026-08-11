@@ -1,0 +1,8 @@
+open rank_1.pdb
+open rank_2.pdb
+open rank_3.pdb
+addh
+hbonds #1/A restrict #1/B saveFile hb_rank1.txt log false
+hbonds #2/A restrict #2/B saveFile hb_rank2.txt log false
+hbonds #3/A restrict #3/B saveFile hb_rank3.txt log false
+exit

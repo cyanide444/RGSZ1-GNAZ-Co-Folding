@@ -1,0 +1,53 @@
+# condense_ranks.cxc
+#
+# Condenses 3 AF3 ranks of the RGSZ1(262-378)-GNAZ-GTP complex into one
+# model, colored/painted by where the ranks disagree structurally.
+#
+# USAGE:
+#   1. Put this file and per_residue_deviation.py in the same folder as
+#      rank_1.cif, rank_2.cif, rank_3.cif.
+#   2. In ChimeraX: File > Open, or the command line, `cd` into that folder:
+#        cd /path/to/your/folder
+#   3. Run this script:
+#        open condense_ranks.cxc
+#
+# Chain layout (confirmed identical across all 3 ranks, no offset issues):
+#   chain A = GNAZ, residues 1-355
+#   chain B = RGSZ1 fragment, residues 1-117 (= true RGSZ1 262-378)
+#   chain C = GTP, chain D = Mg2+
+
+# --- 1. Open all three ranks ---
+open rank_1.cif
+open rank_2.cif
+open rank_3.cif
+
+# --- 2. Superimpose rank_2 and rank_3 onto rank_1, anchored on GNAZ (chain A) ---
+# GNAZ is the more rigid partner here, so it's the better alignment anchor
+# than the full complex or the RGSZ1 fragment.
+matchmaker #2/A to #1/A
+matchmaker #3/A to #1/A
+
+# --- 3. Compute per-residue CA deviation across the 3 aligned ranks ---
+# This writes a "rankdev" attribute (in Angstroms) onto model #1's residues.
+open per_residue_deviation.py
+
+# --- 4. Build the condensed view: show only rank_1, colored by deviation ---
+hide #2,#3 models
+show #1 models
+color byattribute r:rankdev #1 palette blue:white:red
+key blue:low white:mid red:high pos 0.7,0.05 size 0.3,0.05
+lighting soft
+graphics silhouettes true
+
+# --- 5. Optional: also scale cartoon "worm" radius by deviation for a ---
+#         second visual cue on top of color (uncomment to use)
+# cartoon style #1 modeHelix tube modeStrand tube
+# size #1 atomRadius byattribute rankdev
+
+# --- 6. Optional: keep ranks 2 & 3 visible as faint reference traces ---
+#         (uncomment if you want to see the spread, not just the color)
+# show #2,#3 models
+# color #2,#3 gray transparency 70
+# cartoon #2,#3
+
+view

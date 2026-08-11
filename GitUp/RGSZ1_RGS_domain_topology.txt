@@ -1,0 +1,66 @@
+RGS-DOMAIN SECONDARY-STRUCTURE TOPOLOGY: RGS4 (1AGR) -> RGSZ1
+==============================================================
+Helix nomenclature (a1-a9) and the two subdomains follow Tesmer, Berman, Gilman &
+Sprang, Cell 89:251-261 (1997) - the paper that reported 1AGR. The nine-helix RGS box
+folds into a "terminal" subdomain (a1,a2,a3,a8,a9) and a four-helix "bundle" subdomain
+(a4,a5,a6,a7). Ga is engaged by three loops of the bundle face: a3-a4, a5-a6, a7-a8.
+
+SOURCES
+  RGS4 ranges  : HELIX records deposited with 1AGR (chain E) = authors' assignment.
+  RGSZ1 ranges : DSSP (ChimeraX 1.11) on RGSZ1_protein_only_docking.pdb, chain B;
+                 short 3-10 continuations merged into the adjacent a-helix.
+
+NUMBERING  (CORRECTED 2026-07-31: docking human offset was +261, is +259)
+  RGS4          : native = human RGS4 (identical in 1AGR).
+  RGSZ1 docking : RGSZ1_protein_only_docking.pdb chain B, resid 1-121.
+                  human RGS20 = docking file + 259.  Core register: docking file = RGS4 - 59.
+  RGSZ1 AF3     : rank_1/2/3 chain B (used in common_contacts_filtered.csv), resid 1-117.
+                  AF3 file = docking file - 2 = human - 261.
+  -> the same residue has THREE numbers, e.g. the catalytic-loop Ser:
+        docking Ser69  =  AF3 Ser67  =  human Ser328  =  RGS4 Asn128 position.
+
+HELICES
+  elem  subdomain   RGS4 (1AGR)        docking file  RGSZ1 human   Ga-contact
+  ----  ----------  -----------------  ------------  ------------  ----------
+  a1    terminal    Gln53 - Glu61      (truncated)   (< 260)       -           * see note
+  a2    terminal    Leu63 - Ser68       2 - 8        261 - 267     -
+  a3    terminal    Glu70 - Ser82      11 - 23       270 - 282     - (loop out)
+  a4    bundle      Glu86 - Lys100     27 - 41       286 - 300     - (loop out)
+  a5    bundle      Lys106 - Phe118    45 - 60       304 - 319     - (loop out)
+  a6    bundle      Ser131 - Leu142    72 - 82       331 - 341     - (loop out)
+  a7    bundle      Asp150 - Lys162    91 - 105      350 - 364     - (loop out)
+  a8    terminal    Ser164 - Lys170   106 - 111      365 - 370     - (loop out)
+  a9    terminal    Arg172 - Leu175   113 - 120      372 - 379     -
+
+LOOPS
+  loop        RGS4 (1AGR)     docking file  RGSZ1 human   role
+  ----------  --------------  ------------  ------------  ------------------------------
+  a2-a3       69               9 - 10       268 - 269
+  a3-a4       83 - 85         24 - 26       283 - 285     ** Ga-contact loop
+  a4-a5       101 - 105       42 - 44       301 - 303
+  a5-a6       119 - 130       61 - 71       320 - 330     ** Ga-contact loop (catalytic;
+                                                             RGS4 Asn128 -> RGSZ1 Ser:
+                                                             docking Ser69 / AF3 Ser67 / human Ser328.
+                                                             CONFIRMED a serine, not Asn - see note.)
+  a6-a7       143 - 149       83 - 90       342 - 349
+  a7-a8       163            104 - 105      363 - 364     ** Ga-contact loop
+  a8-a9       171            112            371
+
+NOTE on the catalytic residue (a5-a6 loop)
+  The near-invariant RGS catalytic asparagine (RGS4 Asn128, which H-bonds the Ga catalytic
+  Gln204 at 3.04 A in 1AGR) is a SERINE in RGSZ1/RGS20 (docking Ser69 = AF3 Ser67 =
+  human Ser328). This was confirmed against the canonical human RGS20 sequence (2026-07-31)
+  - it is a genuine divergence, not a model artifact. In the AF3 GNAZ.RGSZ1 model this Ser
+  does not reach GNAZ Gln205 (4.48 A); it instead H-bonds Switch II Glu208 (2.52 A).
+
+NOTE on a1
+  The RGSZ1 docking construct spans human ~260-380 (docking file 1-121). At the core
+  register (docking file = RGS4 - 59) RGS4 a1 (53-61) maps to human ~253-261, so a1 lies
+  almost entirely N-terminal to the construct (which starts at human 260); only its last
+  residue(s) are present. DSSP finds no separate a1 helix - the first modeled helix is a2.
+  a1 is in the terminal subdomain and makes NO Ga contact, so its truncation removes no
+  interface residue, but the construct is not the full RGS box (it lacks a1).
+
+NOTE on register
+  docking file = RGS4 - 59 is exact for a3-a9 (verified by both alignment and DSSP overlap).
+  a1/a2 carry ~2-residue uncertainty (N-terminal sequence divergence + a1 truncation).

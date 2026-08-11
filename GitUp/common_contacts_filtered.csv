@@ -1,0 +1,28 @@
+﻿GNAZ_residue,GNAZ_region,RGSZ1_residue_human,RGSZ1_residue_file,RGSZ1_element_Tesmer,contact_type,consistent_type,mindist_rank1,mindist_rank2,mindist_rank3,mean_dist
+TYR75,other,ARG362,ARG101,a7,van der Waals,yes,3.22,2.93,3.04,3.06
+ARG83,other,ARG332,ARG71,a6,van der Waals,yes,3.18,2.50,3.78,3.15
+ASP180,Switch I,ARG362,ARG101,a7,van der Waals,yes,2.77,2.61,2.99,2.79
+ASP180,Switch I,ASP363,ASP102,a7-a8 loop,van der Waals,yes,3.26,3.11,3.22,3.20
+MET181,Switch I,LEU359,LEU98,a7,Hydrophobic,yes,3.00,3.23,3.11,3.11
+MET181,Switch I,ASP363,ASP102,a7-a8 loop,van der Waals,yes,3.65,3.41,3.60,3.55
+THR182,Switch I,ASP363,ASP102,a7-a8 loop,van der Waals,yes,3.69,3.78,3.66,3.71
+THR183,Switch I,ASN288,ASN27,a4,H-bond,yes,2.96,3.17,3.01,3.05
+THR183,Switch I,ASP363,ASP102,a7-a8 loop,H-bond,yes,2.83,2.89,2.76,2.83
+THR183,Switch I,SER364,SER103,a8,van der Waals,yes,3.85,3.71,3.74,3.76
+THR183,Switch I,ARG367,ARG106,a8,van der Waals,yes,3.91,3.64,3.79,3.78
+GLY184,Switch I,GLU283,GLU22,a3-a4 loop,van der Waals,yes,3.18,2.96,3.12,3.09
+ILE185,Switch I,GLU283,GLU22,a3-a4 loop,H-bond,yes,2.72,2.84,2.68,2.74
+ILE185,Switch I,PHE284,PHE23,a3-a4 loop,Hydrophobic,yes,3.50,3.87,3.57,3.65
+VAL186,Switch I,ARG367,ARG106,a8,van der Waals,yes,3.31,3.33,3.27,3.31
+SER207,Switch II,GLU326,GLU65,a5-a6 loop,van der Waals,yes,3.63,3.60,3.59,3.61
+SER207,Switch II,VAL327,VAL66,a5-a6 loop,van der Waals,yes,3.80,3.88,3.88,3.86
+SER207,Switch II,SER328,SER67,a5-a6 loop,van der Waals,yes,2.79,2.70,2.66,2.71
+GLU208,Switch II,SER328,SER67,a5-a6 loop,H-bond,no,2.52,2.94,3.12,2.86
+LYS211,Switch II,PHE284,PHE23,a3-a4 loop,van der Waals,yes,3.12,2.97,3.10,3.06
+LYS211,Switch II,GLU287,GLU26,a4,Salt bridge,yes,2.46,2.46,2.47,2.46
+HIS214,Switch II,PHE284,PHE23,a3-a4 loop,van der Waals,yes,3.42,3.22,3.35,3.33
+TYR236,Switch III,ASP330,ASP69,a5-a6 loop,van der Waals,yes,2.88,2.86,2.93,2.89
+TYR236,Switch III,SER331,SER70,a6,H-bond,yes,3.46,3.25,3.43,3.38
+TYR236,Switch III,ARG332,ARG71,a6,van der Waals,yes,3.60,3.42,3.14,3.38
+GLU237,Switch III,SER331,SER70,a6,van der Waals,yes,3.20,3.61,3.40,3.40
+ASN239,Switch III,SER331,SER70,a6,van der Waals,yes,3.13,2.89,3.63,3.22

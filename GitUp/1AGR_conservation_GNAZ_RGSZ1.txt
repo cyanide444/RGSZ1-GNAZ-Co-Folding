@@ -1,0 +1,33 @@
+CONSERVATION OF PROPOSED 1AGR RESTRAINT RESIDUES IN GNAZ / RGSZ1
+======================================================================
+
+Gai1 -> GNAZ (Gai1 numbering; 1AGR & human Gai1 share numbering)
+class  Gai1     1AGR=hum? -> GNAZ        conserved in GNAZ?
+active E116    yes      GNAZ K117      no: GNAZ=K vs E
+active K180    yes      GNAZ M181      no: GNAZ=M vs K
+active T182    yes      GNAZ T183      YES (T=T)
+active I184    yes      GNAZ I185      YES (I=I)
+active E207    yes      GNAZ E208      YES (E=E)
+active K210    yes      GNAZ K211      YES (K=K)
+active A235    yes      GNAZ Y236      no: GNAZ=Y vs A
+active E236    yes      GNAZ E237      YES (E=E)
+passive V185    yes      GNAZ V186      YES (V=V)
+passive K209    yes      GNAZ K210      YES (K=K)
+passive H213    yes      GNAZ H214      YES (H=H)
+passive D237    yes      GNAZ D238      YES (D=D)
+
+RGS4 -> RGSZ1 (RGS4 numbering)
+class  RGS4     1AGR=hum? -> RGSZ1       conserved in RGSZ1?
+active E83     yes      RGSZ1 E24       YES (E=E)
+active Y84     yes      RGSZ1 F25       no: RGSZ1=F vs Y
+active E87     yes      RGSZ1 E28       YES (E=E)
+active N88     yes      RGSZ1 N29       YES (N=N)
+active N128    yes      RGSZ1 S69       no: RGSZ1=S vs N
+active S131    yes      RGSZ1 S72       YES (S=S)
+active R134    yes      RGSZ1 R75       YES (R=R)
+active E161    yes      RGSZ1 H102      no: RGSZ1=H vs E
+active D163    yes      RGSZ1 D104      YES (D=D)
+active R166    yes      RGSZ1 --        no map
+passive T124    yes      RGSZ1 P65       no: RGSZ1=P vs T
+passive L159    yes      RGSZ1 L100      YES (L=L)
+passive R167    yes      RGSZ1 --        no map

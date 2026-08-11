@@ -1,0 +1,91 @@
+TRANSITION-STATE ANALYSIS: GNAZ.RGSZ1 (rank_1) vs 1AGR (RGS4.GNAI1 TS mimic)
+=============================================================================
+Date: 2026-07-30
+Session analysed : rank1(4contact)_1AGRsuperimposed.cxs (ChimeraX Matchmaker fit)
+Author's note    : 1AGR is RGS4.Gai1, not RGSZ1.GNAZ, but the Ga catalytic site is
+                   conserved, so it is a valid transition-state reference.
+
+WHAT THE TWO STRUCTURES ARE
+  1AGR  = Gai1 . GDP . AlF4- . Mg2+   -> TRANSITION-STATE MIMIC.
+          AlF4- is planar and sits where the gamma-phosphate is during hydrolysis;
+          an apical water (the nucleophile) completes the Al coordination in-line
+          with the leaving group. This is as close to the true TS as crystallography gets.
+  rank_1 = GNAZ . GTP . Mg2+          -> GROUND STATE (Michaelis-like).
+          Intact tetrahedral gamma-phosphate; AlphaFold3 models no ordered waters.
+
+METHOD
+  Structures were superposed in ChimeraX by Matchmaker (Ga vs Ga). Both models were
+  written out in the shared (superimposed) coordinate frame (combine -> save; files
+  _1agr_super.pdb, _rank1_super.pdb) and all distances below were computed in that
+  common frame (script: ts_analysis.py). Arginine finger and catalytic water were
+  identified geometrically (closest guanidinium N / closest HOH to AlF4 + Gln amide).
+
+--------------------------------------------------------------------------------
+1. SUPERPOSITION QUALITY AT THE ACTIVE SITE  (Ca of equivalent residues)
+     catalytic Gln    Gai1 204 / GNAZ 205   Ca-Ca = 0.50 A
+     arginine finger  Gai1 178 / GNAZ 179   Ca-Ca = 0.46 A
+     Switch I Thr     Gai1 181 / GNAZ 182   Ca-Ca = 0.20 A
+   -> the catalytic scaffold of the two proteins overlays to well under 1 A;
+      the comparison below is therefore meaningful residue-by-residue.
+
+2. CATALYTIC GLUTAMINE   Gln204 (Gai1, TS)  vs  Gln205 (GNAZ)   [the headline]
+   Whole-side-chain overlay after superposition:
+     CA 0.50 | CB 0.65 | CG 0.91 | CD 0.85 | OE1 0.71 | NE2 0.94  (Angstrom)
+   -> GNAZ Gln205 occupies essentially the SAME position and rotamer as the
+      transition-state Gln204, INCLUDING the amide head group (OE1/NE2 within ~0.7-0.9 A).
+      The catalytic glutamine is already in its transition-state conformation in the
+      ground-state GNAZ.RGSZ1 model - it is pre-organised, not retracted.
+
+3. NUCLEOTIDE / METAL / ARGININE-FINGER GEOMETRY
+     gamma-phosphate:  AlF4 Al (TS)  vs  GTP P-gamma (rank_1)   = 0.59 A apart
+     catalytic Mg2+ :  Mg (1AGR)     vs  Mg (rank_1)            = 0.29 A apart
+     arginine finger:  Gai1 Arg178 guanidinium 3.69 A from Al;
+                       GNAZ Arg179 guanidinium 3.39 A from P-gamma
+                       (the two guanidinium tips are 1.60 A apart -> both engaged,
+                        modest rotamer difference)
+   -> the scissile phosphate, the catalytic metal and the arginine finger of the
+      GNAZ ground state all sit within ~0.3-0.6 A of their transition-state positions.
+
+4. TRANSITION-STATE PROBE  (place the 1AGR nucleophilic water into the rank_1 frame)
+     In 1AGR:   water -> Al = 1.95 A ;  water -> Gln204.NE2 = 3.55 A
+     Mapped to rank_1: same water point -> GNAZ Gln205.NE2 = 2.96 A
+                                        -> GTP P-gamma      = 2.51 A
+   -> if the attacking water sat where it does in the true TS, GNAZ Gln205 would be
+      positioned to hydrogen-bond/orient it (2.96 A - even tighter than in 1AGR), and
+      it would lie in-line over the gamma-phosphate. GNAZ is geometrically poised to
+      position the nucleophile.
+
+--------------------------------------------------------------------------------
+INTERPRETATION
+  The AF3 GNAZ.RGSZ1 model, although a ground-state GTP complex, has an active site
+  that is strikingly transition-state-like: catalytic Gln205, Mg2+, the gamma-phosphate
+  and the Arg179 finger all superimpose on the 1AGR transition-state complex to within
+  ~0.3-0.9 A. In particular Gln205 is already in the TS rotamer with its amide aimed at
+  the position the nucleophilic water occupies in 1AGR. This is exactly what the RGS
+  transition-state-stabilisation mechanism predicts: RGSZ1 binding pre-organises the
+  GNAZ switch/catalytic apparatus into the productive (pre-hydrolysis) geometry.
+
+  This supports the mechanistic reading from the interface analysis: the RGSZ1 a4/a7
+  contacts that clamp Switch I (around Thr183) hold Thr182 on the Mg2+ and lock Gln205,
+  Arg179 and the gamma-phosphate in a catalytically competent arrangement - i.e.
+  transition-state stabilisation, not Mg2+ removal.
+
+CAVEATS
+  - Ground state, not the TS itself: rank_1 has a tetrahedral GTP gamma-phosphate, not
+    the planar/pentacoordinate AlF4- TS. This shows the site is POISED, not the actual
+    bond-breaking geometry.
+  - No nucleophilic water is present in the AF3 model (AF3 omits ordered solvent); the
+    "water probe" borrows the 1AGR water position.
+  - Reference is Gai1/RGS4. Side-chain rotamers (Gln205, Arg179) are AF3 predictions.
+  - RGSZ1's residue homologous to the RGS4 catalytic Asn128 is a Ser - CONFIRMED against
+    canonical human RGS20 (2026-07-31), a genuine divergence. Numbering: AF3 Ser67 =
+    docking Ser69 = human Ser328. It does NOT contact GNAZ Gln205 (4.48 A; cf. RGS4
+    Asn128->Gai1 Gln204 = 3.04 A H-bond) and instead H-bonds Switch II Glu208 (2.52 A).
+    Yet Gln205 is still positioned in the TS rotamer here, so in this pair the catalytic
+    Gln is pre-organised by the Ga switch clamp rather than by a direct RGS-Asn contact.
+
+FILES (this folder)
+  ts_analysis.py        - measurement script (reproduces every number above)
+  _1agr_super.pdb       - 1AGR in the superimposed frame
+  _rank1_super.pdb      - rank_1 in the superimposed frame
+  TS_analysis_rank1_vs_1AGR.txt - this report

@@ -1,0 +1,28 @@
+GNAZ_residue,RGSZ1_residue_human,RGSZ1_residue_file,contact_type,type_rank1,type_rank2,type_rank3,consistent_type,mindist_rank1,mindist_rank2,mindist_rank3,mean_dist,pLDDT_GNAZ_mean,pLDDT_RGSZ1_mean
+TYR75,ARG362,ARG101,van der Waals,van der Waals,van der Waals,van der Waals,yes,3.22,2.93,3.04,3.06,93.8,92.5
+ARG83,ARG332,ARG71,H-bond,H-bond,H-bond,van der Waals,no,3.18,2.5,3.78,3.15,96.3,87.6
+ASP180,ARG362,ARG101,H-bond,H-bond,H-bond,H-bond,yes,2.77,2.61,2.99,2.79,94.4,92.5
+ASP180,ASP363,ASP102,H-bond,H-bond,H-bond,H-bond,yes,3.26,3.11,3.22,3.2,94.4,96.2
+MET181,LEU359,LEU98,Hydrophobic,Hydrophobic,Hydrophobic,Hydrophobic,yes,3.85,3.94,3.96,3.92,95.8,96.7
+MET181,ASP363,ASP102,van der Waals,van der Waals,van der Waals,van der Waals,yes,3.65,3.41,3.6,3.55,95.8,96.2
+THR182,ASP363,ASP102,van der Waals,van der Waals,van der Waals,van der Waals,yes,3.69,3.78,3.66,3.71,97.9,96.2
+THR183,ASN288,ASN27,H-bond,H-bond,H-bond,H-bond,yes,2.96,3.17,3.01,3.05,96.3,98.4
+THR183,ASP363,ASP102,H-bond,H-bond,H-bond,H-bond,yes,2.83,2.89,2.76,2.83,96.3,96.2
+THR183,SER364,SER103,van der Waals,van der Waals,van der Waals,van der Waals,yes,3.85,3.71,3.74,3.76,96.3,97.0
+THR183,ARG367,ARG106,van der Waals,van der Waals,van der Waals,van der Waals,yes,3.91,3.64,3.79,3.78,96.3,95.5
+GLY184,GLU283,GLU22,van der Waals,van der Waals,van der Waals,van der Waals,yes,3.18,2.96,3.12,3.09,97.3,97.0
+ILE185,GLU283,GLU22,H-bond,H-bond,H-bond,H-bond,yes,2.72,2.84,2.68,2.74,97.6,97.0
+ILE185,PHE284,PHE23,Hydrophobic,Hydrophobic,Hydrophobic,Hydrophobic,yes,3.5,3.87,3.57,3.65,97.6,97.2
+VAL186,ARG367,ARG106,van der Waals,van der Waals,van der Waals,van der Waals,yes,3.31,3.33,3.27,3.31,96.9,95.5
+SER207,GLU326,GLU65,van der Waals,van der Waals,van der Waals,van der Waals,yes,3.63,3.6,3.59,3.61,95.7,96.5
+SER207,VAL327,VAL66,van der Waals,van der Waals,van der Waals,van der Waals,yes,3.8,3.88,3.88,3.86,95.7,97.5
+SER207,SER328,SER67,H-bond,H-bond,H-bond,H-bond,yes,2.79,2.7,2.66,2.71,95.7,94.5
+GLU208,SER328,SER67,H-bond,H-bond,H-bond,H-bond,yes,2.52,2.94,3.12,2.86,97.3,94.5
+LYS211,PHE284,PHE23,H-bond,H-bond,H-bond,H-bond,yes,3.25,3.01,3.16,3.14,96.5,97.2
+LYS211,GLU287,GLU26,Salt bridge,Salt bridge,Salt bridge,Salt bridge,yes,2.46,2.46,2.47,2.46,96.5,97.5
+HIS214,PHE284,PHE23,van der Waals,van der Waals,van der Waals,van der Waals,yes,3.42,3.22,3.35,3.33,95.5,97.2
+TYR236,ASP330,ASP69,H-bond,H-bond,H-bond,van der Waals,no,3.21,3.21,2.93,3.12,91.6,90.3
+TYR236,SER331,SER70,H-bond,H-bond,H-bond,H-bond,yes,3.46,3.25,3.43,3.38,91.6,88.5
+TYR236,ARG332,ARG71,H-bond,van der Waals,H-bond,van der Waals,no,3.6,3.42,3.14,3.38,91.6,87.6
+GLU237,SER331,SER70,van der Waals,van der Waals,van der Waals,van der Waals,yes,3.2,3.61,3.4,3.4,90.7,88.5
+ASN239,SER331,SER70,H-bond,H-bond,H-bond,van der Waals,no,3.13,2.89,3.63,3.22,89.5,88.5
